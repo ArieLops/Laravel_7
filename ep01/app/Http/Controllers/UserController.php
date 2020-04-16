@@ -17,7 +17,6 @@ class UserController extends Controller
         $user->password = Hash::make('123');
         $user->save(); */
 
-        //echo "<h1> Listagem de Usuários </h1>";
         $user = User::where('id', '>=', 1)->first();
         return view('listUser', [
             'userList' => $user
